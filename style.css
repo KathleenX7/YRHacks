@@ -26,15 +26,33 @@ body{
     display: flex;
 }
 
+.left-align{
+    left: 0;
+}
+
+.options {
+    top: 0;
+    position: relative;
+    height: 50%;
+}
+
+.stats {
+    bottom: 0;
+    position: fixed;
+    height: 50%;
+}
+
 #messages{
     right: 0;
     top: 0;
     position: fixed;
     width: 20%;
+    height: 90%;
     text-align: left;
     align-self: flex-start;
     word-wrap: normal;
     word-break: break-all;
+    overflow: scroll;
 }
 
 .message{
