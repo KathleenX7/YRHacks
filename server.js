@@ -11,7 +11,7 @@ const io = require("socket.io")(server);
 
 //variables
 var players = []
-var globalStats = {economy: 5, happiness: 5, health: 5, waste: 5, deforestation: 5, carbon: 5, turtle: 5, water: 5};
+var globalStats = {economy: 5, happiness: 5, health: 5, waste: 5, deforestation: 5, carbon: 5, turtle: 5};
 
 // send all file things over to client
 app.use(express.static(__dirname));

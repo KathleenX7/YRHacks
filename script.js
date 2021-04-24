@@ -82,7 +82,6 @@ socket.on('stats', function(stats){
     deforestation.textContent = Math.round(stats.deforestation);
     carbon.textContent = Math.round(stats.carbon);
     turtles.textContent = Math.round(stats.turtle);
-    water.textContent = Math.round(stats.water);
 });
 
 form.addEventListener('submit', function(e) {
