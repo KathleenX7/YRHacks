@@ -58,10 +58,11 @@ io.sockets.on('connection', function(socket) {
       globalStats.economy = Math.round(globalStats.economy - 2);
     }
     globalStats.happiness = 1 + ((stats.meatEaten + stats.plantEaten)/2)/25 + globalStats.economy/3 + stats.appliancePurchase/50;
-    globalStats.health = 4 + stats.plantEaten/25 + stats.meatEaten/5 - carbonEmission/2.5;
     globalStats.waste = 4 + stats.appliancePurchase/25 + (stats.meatEaten + stats.plantEaten)/125 - stats.recyclePercent/30; 
     globalStats.deforestation = 10 - stats.appliancePurchase/50 - stats.plantEaten/30 - stats.meatEaten/25;
     globalStats.carbon = (6 + stats.meatEaten/50 + globalStats.deforestation/5 - stats.energyEfficiency/40 - stats.renewableEnergy/40)/8;
+    globalStats.health = 4 + stats.plantEaten/25 + stats.meatEaten/5 - globalStats.carbon/2.5;
+
     if(stats.transportation === "Car"){
       globalStats.carbon = Math.round(globalStats.carbon + 1);
     }else if(stats.transportation === "Bus"){
