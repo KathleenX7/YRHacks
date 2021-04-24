@@ -40,10 +40,10 @@ function sendName(){
  */
 function sendStats(){
     if(transportation != null && transportation.value){
-        console.log({meatEaten: meatEaten.value, plantEaten: plantEaten.value, renewableEnergy: renewableEnergy.value, energyEfficiency: energyEfficiency.value, recyclePercent: recyclePercent.value, appliancePurchase: appliancePurchase.value, transportation: transportation.value});
+        // console.log({meatEaten: meatEaten.value, plantEaten: plantEaten.value, renewableEnergy: renewableEnergy.value, energyEfficiency: energyEfficiency.value, recyclePercent: recyclePercent.value, appliancePurchase: appliancePurchase.value, transportation: transportation.value});
         socket.emit("stats", {meatEaten: meatEaten.value, plantEaten: plantEaten.value, renewableEnergy: renewableEnergy.value, energyEfficiency: energyEfficiency.value, recyclePercent: recyclePercent.value, appliancePurchase: appliancePurchase.value, transportation: transportation.value});
     }else{
-        console.log({meatEaten: meatEaten.value, plantEaten: plantEaten.value, renewableEnergy: renewableEnergy.value, energyEfficiency: energyEfficiency.value, recyclePercent: recyclePercent.value, appliancePurchase: appliancePurchase.value});
+        // console.log({meatEaten: meatEaten.value, plantEaten: plantEaten.value, renewableEnergy: renewableEnergy.value, energyEfficiency: energyEfficiency.value, recyclePercent: recyclePercent.value, appliancePurchase: appliancePurchase.value});
         socket.emit("stats", {meatEaten: meatEaten.value, plantEaten: plantEaten.value, renewableEnergy: renewableEnergy.value, energyEfficiency: energyEfficiency.value, recyclePercent: recyclePercent.value, appliancePurchase: appliancePurchase.value});
     }
     setTimeout(sendStats, 50);
@@ -57,6 +57,10 @@ socket.on('chat message', function(msg) {
     
     messages.appendChild(item);
     window.scrollTo(0, document.body.scrollHeight);
+});
+
+socket.on('stats', function(stats){
+    console.log(stats);
 });
 
 form.addEventListener('submit', function(e) {
