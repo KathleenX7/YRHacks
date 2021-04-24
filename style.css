@@ -59,7 +59,6 @@ body{
 .main-screen {
     color: darkmagenta;
     background-color: yellow;
-    background-image: url("./assets/background.gif");
     background-repeat: no-repeat;
     background-size: cover;
     left: 30%;

@@ -1,16 +1,16 @@
 <!DOCTYPE html>
 <head>
     <title>YRHacks Thing</title><!--we should think of a legit title-->
-    <link rel="icon" href="./assets/alive_tree.gif">
-    <link rel="stylesheet" type="text/css" href="style.css"> 
+    <link rel="icon" href="./assets/turtle.gif">
+    <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body onload="onConnect()">
     <!--tabs pannels-->
     <div class="tabs-pannel flex">
-        <a href="#human" class="tab">human</a>
-        <a href="#ocean" class="tab">ocean</a>
-        <a href="#city" class="tab">city</a>
-        <a href="#forest" class="tab">forest</a>
+        <button onclick="switchView(event, 'human')" class="tab">human</button>
+        <button onclick="switchView(event, 'ocean')" class="tab">ocean</button>
+        <button onclick="switchView(event, 'city')" class="tab">city</button>
+        <button onclick="switchView(event, 'forest')" class="tab">forest</button>
     </div>
     <!--options and stats-->
     <span class="left-align flex">
@@ -25,16 +25,16 @@
     <span class="main-screen flex">
         <ul>
             <li class="tab-element" id="human">
-                HUMAN<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>a
+                HUMAN
             </li>
             <li class="tab-element" id="ocean">
-                OCEAN<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>a
+                OCEAN
             </li>
             <li class="tab-element" id="city">
-                CITY<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>a
+                CITY
             </li>
             <li class="tab-element" id="forest">
-                FOREST<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>a
+                FOREST
             </li>
         </ul>
     </span>
