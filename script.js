@@ -27,7 +27,6 @@ var waste = document.getElementById("waste");
 var deforestation = document.getElementById("deforestation");
 var carbon = document.getElementById("carbon");
 var turtles = document.getElementById("turtles");
-var water = document.getElementById("water");
 
 var user = "";
 
