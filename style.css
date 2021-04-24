@@ -35,19 +35,25 @@ body{
 }
 
 .options {
-    background-color: grey;
-    top: 10%;
+    background-color: rgb(236, 236, 236);
+    top: 5%; 
     position: fixed;
-    height: 50%;
-    width: 30%;
+    height: 40%;
+    width: 20%;
+    border-radius: 10px;
+    border: 5px solid #000000;
+    padding: 10px;
 }
 
 .stats {
-    background-color: aqua;
-    bottom: 0;
+    background-color: rgb(236, 236, 236);
+    bottom: 5%;
     position: fixed;
-    height: 50%;
-    width: 30%;
+    height: 40%;
+    width: 20%;
+    border-radius: 10px;
+    border: 5px solid #000000;
+    padding: 10px;
 }
 
 .main-screen {
