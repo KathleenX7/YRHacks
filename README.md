@@ -12,7 +12,7 @@ The main purpose of Save the Turtles is to provide users with a simulation "game
 
 ## How we built it
 
-It was built with socket.io, JavaScript, HTML and css and piskel.
+It was built with node.js socket.io, JavaScript, HTML and css and piskel.
 
 ## Challenges we ran into
 
@@ -29,3 +29,7 @@ We learned the importance of sleep, hopefully.
 ## What's next for Save the Turtles
 
 We will be adding more factors and updating calculations in the future.
+
+## How to run Save the Turtles
+
+First, type `node server.js` in the terminal (make sure node is installed). Visit `localhost:3000`.
