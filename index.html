@@ -1,28 +1,43 @@
 <!DOCTYPE html>
 <head>
     <title>YRHacks Thing</title><!--we should think of a legit title-->
-    <link rel="icon" href="./assets/icon.png">
+    <link rel="icon" href="./assets/alive_tree.gif">
     <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body onload="onConnect()">
     <!--tabs pannels-->
     <div class="tabs-pannel flex">
-        <a class="tab">tab1</a>
-        <a class="tab">tab2</a>
-        <a class="tab">tab3</a>
+        <a href="#human" class="tab">human</a>
+        <a href="#ocean" class="tab">ocean</a>
+        <a href="#city" class="tab">city</a>
+        <a href="#forest" class="tab">forest</a>
     </div>
     <!--options and stats-->
-    <div class="left-align">
+    <span class="left-align flex">
         <div class="options">
             <h3>Options</h3>
         </div>
         <div class="stats">
             <h3>Stats</h3>
         </div>
-    </div>
+    </span>
     <!--main screen-->
+    <span class="main-screen flex">
+        <div class="tab-element" id="human">
+            HUMAN
+        </div>
+        <div class="tab-element" id="ocean">
+            OCEAN
+        </div>
+        <div class="tab-element" id="city">
+            CITY
+        </div>
+        <div class="tab-element" id="forest">
+            FOREST
+        </div>
+    </span>
     <!--chat-->
-    <div class="chat-pannel">
+    <div class="chat-pannel flex">
         <div id="messages"></div>
         <form class="chat-pannel" id="chat">
             <input id="chat-box" type="text" autocomplete="off">

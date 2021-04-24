@@ -1,5 +1,6 @@
 body{
     font-family: "comic sans ms";
+    align-items: center;
     /* background-color: blue;
     color: red;
     aight waiting for someone to kill me */
@@ -16,6 +17,7 @@ body{
     bottom: 0;
     text-align: left;
     position: fixed;
+    background-color: deeppink;
 }
 
 .tab{
@@ -24,25 +26,48 @@ body{
 
 .flex{
     display: flex;
+    flex: 1;
 }
 
 .left-align{
     left: 0;
+    width: 30%;
 }
 
 .options {
+    background-color: grey;
     top: 0;
     position: relative;
     height: 50%;
+    width: 30%;
 }
 
 .stats {
+    background-color: aqua;
     bottom: 0;
     position: fixed;
     height: 50%;
+    width: 30%;
+}
+
+.main-screen {
+    background-color: yellow;
+    background-image: url("./assets/background.gif");
+    background-repeat: no-repeat;
+    background-size: cover;
+    left: 20%;
+    position: fixed;
+    height: 100%;
+    width: 50%;
+}
+
+.tab-element {
+    height: 100%;
+    overflow: hidden;
 }
 
 #messages{
+    background-color: blueviolet;
     right: 0;
     top: 0;
     position: fixed;
