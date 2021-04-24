@@ -39,8 +39,14 @@ function sendName(){
  * Sends player stats to the server every second
  */
 function sendStats(){
-    socket.emit("stats", {meatEaten: meatEaten, plantEaten, plantEaten, renewableEnergy: renewableEnergy, energyEfficiency: energyEfficiency, recyclePercent: recyclePercent, appliancePurchase: appliancePurchase, transportation: transportation});
-    setTimeout(sendStats, 1000);
+    if(transportation != null && transportation.value){
+        console.log({meatEaten: meatEaten.value, plantEaten: plantEaten.value, renewableEnergy: renewableEnergy.value, energyEfficiency: energyEfficiency.value, recyclePercent: recyclePercent.value, appliancePurchase: appliancePurchase.value, transportation: transportation.value});
+        socket.emit("stats", {meatEaten: meatEaten.value, plantEaten: plantEaten.value, renewableEnergy: renewableEnergy.value, energyEfficiency: energyEfficiency.value, recyclePercent: recyclePercent.value, appliancePurchase: appliancePurchase.value, transportation: transportation.value});
+    }else{
+        console.log({meatEaten: meatEaten.value, plantEaten: plantEaten.value, renewableEnergy: renewableEnergy.value, energyEfficiency: energyEfficiency.value, recyclePercent: recyclePercent.value, appliancePurchase: appliancePurchase.value});
+        socket.emit("stats", {meatEaten: meatEaten.value, plantEaten: plantEaten.value, renewableEnergy: renewableEnergy.value, energyEfficiency: energyEfficiency.value, recyclePercent: recyclePercent.value, appliancePurchase: appliancePurchase.value});
+    }
+    setTimeout(sendStats, 50);
 }
 sendStats();
 
