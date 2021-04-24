@@ -40,9 +40,9 @@ p{
 
 .options {
     background-color: rgb(236, 236, 236);
-    top: 5%; 
+    top: 10px; 
     position: fixed;
-    height: 40%;
+    height: 49%;
     width: 20%;
     border-radius: 10px;
     border: 5px solid #000000;
@@ -51,7 +51,7 @@ p{
 
 .stats {
     background-color: rgb(236, 236, 236);
-    bottom: 5%;
+    bottom: 10px;
     position: fixed;
     height: 40%;
     width: 20%;
