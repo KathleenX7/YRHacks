@@ -36,8 +36,8 @@ body{
 
 .options {
     background-color: grey;
-    top: 0;
-    position: relative;
+    top: 10%;
+    position: fixed;
     height: 50%;
     width: 30%;
 }
@@ -51,19 +51,42 @@ body{
 }
 
 .main-screen {
+    color: darkmagenta;
     background-color: yellow;
     background-image: url("./assets/background.gif");
     background-repeat: no-repeat;
     background-size: cover;
-    left: 20%;
+    left: 30%;
     position: fixed;
-    height: 100%;
+    height: 95%;
     width: 50%;
 }
 
 .tab-element {
     height: 100%;
-    overflow: hidden;
+    width: 100%;
+    position: fixed;
+    /* overflow: hidden; */
+}
+
+#human {
+    background-image: url("./assets/background.gif");
+    /* top: 10%; */
+}
+
+#ocean {
+    /* top: 110%; */
+    background-image: url("./assets/ocean.gif");
+}
+
+#city {
+    background-image: url("./assets/background.gif");
+    /* top: 210%; */
+}
+
+#forest {
+    /* top: 310%; */
+    background-image: url(./assets/forest.gif);
 }
 
 #messages{
