@@ -84,11 +84,11 @@ socket.on('stats', function(stats){
     let total = Math.round(stats.economy) + Math.round(stats.happiness) + Math.round(stats.health) - Math.round(stats.waste) - Math.round(stats.deforestation) - Math.round(stats.carbon) - Math.round(stats.turtle);
     //min = -40, max = 30
     if(total < -15){
-        document.getElementById("screen").style.backgroundImage = "url('./assets/ocean.gif)";
+        document.getElementById("screen").style.backgroundImage = "url('./assets/dead.gif')";
     }else if(total < 15){
-        document.getElementById("screen").style.backgroundImage = "url('./assets/medium.gif)";
+        document.getElementById("screen").style.backgroundImage = "url('./assets/medium.gif')";
     }else{
-        document.getElementById("screen").style.backgroundImage = "url('./assets/good.gif)";
+        document.getElementById("screen").style.backgroundImage = "url('./assets/good.gif')";
     }
 });
 
