@@ -6,12 +6,12 @@
 </head>
 <body onload="onConnect()">
     <!--tabs pannels-->
-    <div class="tabs-pannel flex">
+    <!-- <div class="tabs-pannel flex">
         <button onclick="switchView(event, 'human')" class="tab">human</button>
         <button onclick="switchView(event, 'ocean')" class="tab">ocean</button>
         <button onclick="switchView(event, 'city')" class="tab">city</button>
         <button onclick="switchView(event, 'forest')" class="tab">forest</button>
-    </div>
+    </div> -->
     <!--options and stats-->
     <span class="left-align flex">
         <div class="options">
@@ -34,24 +34,18 @@
         </div>
         <div class="stats">
             <h3>Stats</h3>
+                Economy Level: <p id="economy">$0</p><br>
+                Happiness Level: <p id="happiness">0</p><br>
+                Health Level: <p id="health">0</p><br>
+                Waste Production: <p id="waste">0</p><br>
+                Deforestation: <p id="deforestation">0</p><br>
+                Carbon Emissions: <p id="0">0</p><br>
+                Turtle (and other sea creatures) dead: <p id="turtles">0</p><br>
+                Water Polution: <p id="water">0</p><br>
         </div>
     </span>
     <!--main screen-->
     <span class="main-screen flex">
-        <ul>
-            <li class="tab-element" id="human">
-                HUMAN
-            </li>
-            <li class="tab-element" id="ocean">
-                OCEAN
-            </li>
-            <li class="tab-element" id="city">
-                CITY
-            </li>
-            <li class="tab-element" id="forest">
-                FOREST
-            </li>
-        </ul>
     </span>
     <!--chat-->
     <div class="chat-pannel flex">

@@ -6,6 +6,10 @@ body{
     aight waiting for someone to kill me */
 }
 
+p{
+    display: inline;
+}
+
 .tabs-pannel{
     top: 0;
     align-content: center;
@@ -58,10 +62,10 @@ body{
 
 .main-screen {
     color: darkmagenta;
-    background-color: yellow;
+    background-image: url("./assets/background.gif");
     background-repeat: no-repeat;
     background-size: cover;
-    left: 30%;
+    left: 25%;
     position: fixed;
     height: 95%;
     width: 50%;
