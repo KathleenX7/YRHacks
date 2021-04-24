@@ -49,8 +49,9 @@ io.sockets.on('connection', function(socket) {
   });
   //deals with calculations of stuffs
   socket.on('stats', function(stats){
-    // console.log(stats);
+    console.log(stats);
     //deal with stats
+    console.log(stats.meatEaten);
     io.emit('stats', globalStats);
   });
 });
