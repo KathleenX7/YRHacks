@@ -75,14 +75,14 @@ socket.on('chat message', function(msg) {
 
 socket.on('stats', function(stats){
     console.log(stats);
-    economy.textContent = stats.economy;
-    happiness.textContent = stats.happiness;
-    health.textContent = stats.health;
-    waste.textContent = stats.waste;
-    deforestation.textContent = stats.deforestation;
-    carbon.textContent = stats.carbon;
-    turtles.textContent = stats.turtle;
-    water.textContent = stats.water;
+    economy.textContent = Math.round(stats.economy);
+    happiness.textContent = Math.round(stats.happiness);
+    health.textContent = Math.round(stats.health);
+    waste.textContent = Math.round(stats.waste);
+    deforestation.textContent = Math.round(stats.deforestation);
+    carbon.textContent = Math.round(stats.carbon);
+    turtles.textContent = Math.round(stats.turtle);
+    water.textContent = Math.round(stats.water);
 });
 
 form.addEventListener('submit', function(e) {
