@@ -4,10 +4,13 @@
 
 // create the socket
 var socket = io.connect();
+
+//chat related cariables
 var form = document.getElementById("chat");
 var input = document.getElementById("chat-box");
 var messages = document.getElementById("messages");
 
+//options related variables
 var meatEaten = document.getElementById("meat-eaten");
 var plantEaten = document.getElementById("plant-eaten");
 var renewableEnergy = document.getElementById("renewable-energy");
@@ -15,6 +18,17 @@ var energyEfficiency = document.getElementById("energy-efficiency");
 var recyclePercent = document.getElementById("recycle");
 var appliancePurchase = document.getElementById("appliance-purchase");
 var transportation = document.getElementById("transportation");
+
+//stats related variables
+var economy = document.getElementById("economy");
+var happiness = document.getElementById("happiness");
+var health = document.getElementById("health");
+var waste = document.getElementById("waste");
+var deforestation = document.getElementById("deforestation");
+var carbon = document.getElementById("carbon");
+var turtles = document.getElementById("turtles");
+var water = document.getElementById("water");
+
 var user = "";
 
 /**
@@ -61,6 +75,14 @@ socket.on('chat message', function(msg) {
 
 socket.on('stats', function(stats){
     console.log(stats);
+    economy.textContent = stats.economy;
+    happiness.textContent = stats.happiness;
+    health.textContent = stats.health;
+    waste.textContent = stats.waste;
+    deforestation.textContent = stats.deforestation;
+    carbon.textContent = stats.carbon;
+    turtles.textContent = stats.turtle;
+    water.textContent = stats.water;
 });
 
 form.addEventListener('submit', function(e) {
