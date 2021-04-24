@@ -35,21 +35,21 @@ server.listen(3000, () => {
  * @param socket the socket to connect to
  */
 io.sockets.on('connection', function(socket) {
-  console.log("new connection");
+  // console.log("new connection");
   socket.on('name', function(name){
-    console.log("client's name is " + name);
+    // console.log("client's name is " + name);
     // add a new player
     players.push({name: name, food: "0", energy: "0", transportation: "0", waste: "0"});
-    console.log(players);
+    // console.log(players);
   });
   //deals with chat
   socket.on('chat message', function(msg) {
-    console.log(msg);
+    // console.log(msg);
     io.emit('chat message', msg);
   });
   //deals with calculations of stuffs
   socket.on('stats', function(stats){
-    console.log(stats);
+    // console.log(stats);
     //deal with stats
     globalStats.economy = 10 - stats.appliancePurchase/30 - stats.renewableEnergy/30 - stats.energyEfficiency/50; //add transportation
     globalStats.happiness = 1 + stats.meatEaten/50 + stats.plantEaten/50 + globalStats.economy/3 + stats.appliancePurchase/50;

@@ -73,6 +73,7 @@ socket.on('chat message', function(msg) {
 });
 
 socket.on('stats', function(stats){
+    // console.log(stats);
     economy.textContent = Math.round(stats.economy);
     happiness.textContent = Math.round(stats.happiness);
     health.textContent = Math.round(stats.health);
@@ -80,6 +81,15 @@ socket.on('stats', function(stats){
     deforestation.textContent = Math.round(stats.deforestation);
     carbon.textContent = Math.round(stats.carbon);
     turtles.textContent = Math.round(stats.turtle);
+    let total = Math.round(stats.economy) + Math.round(stats.happiness) + Math.round(stats.health) - Math.round(stats.waste) - Math.round(stats.deforestation) - Math.round(stats.carbon) - Math.round(stats.turtle);
+    //min = -40, max = 30
+    if(total < -15){
+        document.getElementById("screen").style.backgroundImage = "url('./assets/dead.gif')";
+    }else if(total < 15){
+        document.getElementById("screen").style.backgroundImage = "url('./assets/medium.gif')";
+    }else{
+        document.getElementById("screen").style.backgroundImage = "url('./assets/good.gif')";
+    }
 });
 
 form.addEventListener('submit', function(e) {
