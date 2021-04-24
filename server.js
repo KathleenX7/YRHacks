@@ -51,7 +51,6 @@ io.sockets.on('connection', function(socket) {
   socket.on('stats', function(stats){
     console.log(stats);
     //deal with stats
-<<<<<<< HEAD
     globalStats.economy = 10 - stats.appliancePurchase/40 - stats.renewableEnergy/40 - stats.energyEfficiency/50; //add transportation
     if(stats.transportation === "Car"){
       globalStats.economy = Math.round(globalStats.economy - 0.5);
@@ -72,9 +71,6 @@ io.sockets.on('connection', function(socket) {
       globalStats.carbon = Math.round(globalStats.carbon + 2);
     }
     globalStats.turtle = 1 + globalStats.waste/2 + globalStats.carbonEmission/7 + stats.appliancePurchase/40; 
-=======
-    console.log(stats.meatEaten);
->>>>>>> 86e7cd04c34faef8a4a5892a72cdf1ce085c6339
     io.emit('stats', globalStats);
   });
 });
