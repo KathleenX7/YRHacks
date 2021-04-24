@@ -41,8 +41,15 @@ io.sockets.on('connection', function(socket) {
     players.push({name: name, food: "0", energy: "0", transportation: "0", waste: "0"});
     console.log(players);
   });
+  //deals with chat
   socket.on('chat message', function(msg) {
     console.log(msg);
     io.emit('chat message', msg);
+  });
+  //deals with calculations of stuffs
+  socket.on('stats', function(stats){
+    console.log(stats);
+    //deal with stats
+    //send stats back
   });
 });

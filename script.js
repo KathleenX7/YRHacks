@@ -7,6 +7,14 @@ var socket = io.connect();
 var form = document.getElementById("chat");
 var input = document.getElementById("chat-box");
 var messages = document.getElementById("messages");
+
+var meatEaten = document.getElementById("meat-eaten");
+var plantEaten = document.getElementById("plant-eaten");
+var renewableEnergy = document.getElementById("renewable-energy");
+var energyEfficiency = document.getElementById("energy-efficiency");
+var recyclePercent = document.getElementById("recycle");
+var appliancePurchase = document.getElementById("appliance-purchase");
+var transportation = document.getElementById("transportation");
 var user = "";
 
 /**
@@ -14,6 +22,7 @@ var user = "";
  */
 function onConnect(){
     sendName();
+    sendStats();
 }
 
 /**
@@ -25,6 +34,12 @@ function sendName(){
     socket.emit("name", name);
     user = name;
 }
+
+function sendStats(){
+    socket.emit("stats", {meatEaten: meatEaten, plantEaten, plantEaten, renewableEnergy: renewableEnergy, energyEfficiency: energyEfficiency, recyclePercent: recyclePercent, appliancePurchase: appliancePurchase, transportation: transportation});
+    setTimeout(sendStats, 1000);
+}
+sendStats();
 
 socket.on('chat message', function(msg) {
     var item = document.createElement('div');
