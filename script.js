@@ -27,7 +27,6 @@ var waste = document.getElementById("waste");
 var deforestation = document.getElementById("deforestation");
 var carbon = document.getElementById("carbon");
 var turtles = document.getElementById("turtles");
-var water = document.getElementById("water");
 
 var user = "";
 
@@ -74,7 +73,6 @@ socket.on('chat message', function(msg) {
 });
 
 socket.on('stats', function(stats){
-    console.log(stats);
     economy.textContent = Math.round(stats.economy);
     happiness.textContent = Math.round(stats.happiness);
     health.textContent = Math.round(stats.health);
@@ -82,13 +80,11 @@ socket.on('stats', function(stats){
     deforestation.textContent = Math.round(stats.deforestation);
     carbon.textContent = Math.round(stats.carbon);
     turtles.textContent = Math.round(stats.turtle);
-    water.textContent = Math.round(stats.water);
 });
 
 form.addEventListener('submit', function(e) {
     e.preventDefault();
     if (input.value){
-        console.log(input.value);
         socket.emit('chat message', user + ": " + input.value);
         input.value = '';
     }

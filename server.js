@@ -51,27 +51,13 @@ io.sockets.on('connection', function(socket) {
   socket.on('stats', function(stats){
     console.log(stats);
     //deal with stats
-    globalStats.economy = 10 - stats.appliancePurchase/40 - stats.renewableEnergy/40 - stats.energyEfficiency/50; //add transportation
-    if(stats.transportation === "Car"){
-      globalStats.economy = Math.round(globalStats.economy - 0.5);
-    }else if (stats.transportation === "Plane"){
-      globalStats.economy = Math.round(globalStats.economy - 2);
-    }
-    globalStats.happiness = 1 + ((stats.meatEaten + stats.plantEaten)/2)/25 + globalStats.economy/3 + stats.appliancePurchase/50;
-    globalStats.waste = 4 + stats.appliancePurchase/25 + (stats.meatEaten + stats.plantEaten)/125 - stats.recyclePercent/30; 
+    globalStats.economy = 10 - stats.appliancePurchase/30 - stats.renewableEnergy/30 - stats.energyEfficiency/50; //add transportation
+    globalStats.happiness = 1 + stats.meatEaten/50 + stats.plantEaten/50 + globalStats.economy/3 + stats.appliancePurchase/50;
+    globalStats.waste = 4 + stats.appliancePurchase/25 + stats.meatEaten/125 + stats.plantEaten/125 - stats.recyclePercent/30; 
     globalStats.deforestation = 10 - stats.appliancePurchase/50 - stats.plantEaten/30 - stats.meatEaten/25;
-    globalStats.carbon = (6 + stats.meatEaten/50 + globalStats.deforestation/5 - stats.energyEfficiency/40 - stats.renewableEnergy/40)/8;
-    globalStats.health = 4 + stats.plantEaten/25 + stats.meatEaten/5 - globalStats.carbon/2.5;
-
-    if(stats.transportation === "Car"){
-      globalStats.carbon = Math.round(globalStats.carbon + 1);
-    }else if(stats.transportation === "Bus"){
-      globalStats.carbon = Math.round(globalStats.carbon + 0.5);
-    }
-    else if (stats.transportation === "Plane"){
-      globalStats.carbon = Math.round(globalStats.carbon + 2);
-    }
-    globalStats.turtle = 1 + globalStats.waste/2 + globalStats.carbonEmission/7 + stats.appliancePurchase/40; 
+    globalStats.carbon = 6 + stats.meatEaten/50 + globalStats.deforestation/5 - stats.energyEfficiency/40 - stats.renewableEnergy/40;
+    globalStats.health = 5 + stats.plantEaten/30 + stats.meatEaten/65 - globalStats.carbon/2.5;
+    globalStats.turtle = 1 + globalStats.waste/2 + stats.appliancePurchase/25; 
     io.emit('stats', globalStats);
   });
 });
