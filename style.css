@@ -1,5 +1,5 @@
 body{
-    font-family: "comic sans ms";
+    font-family: "Lucida Console", "Courier New", monospace;
     align-items: center;
     /* background-color: blue;
     color: red;
@@ -17,7 +17,7 @@ body{
     bottom: 0;
     text-align: left;
     position: fixed;
-    background-color: deeppink;
+    background-color: rgba(144, 255, 222);
 }
 
 .tab{
@@ -67,12 +67,15 @@ body{
 }
 
 #messages{
-    background-color: blueviolet;
-    right: 0;
-    top: 0;
+    background-color: rgb(236, 236, 236);
+    right: 10px;
+    top: 10px;
     position: fixed;
     width: 20%;
     height: 90%;
+    border-radius: 10px;
+    border: 5px solid #000000;
+    padding: 10px;
     text-align: left;
     align-self: flex-start;
     word-wrap: normal;
