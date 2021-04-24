@@ -13,8 +13,8 @@ body{
 }
 
 .chat-pannel{
-    right: 0;
-    bottom: 0;
+    right: 110px;
+    bottom: 35px;
     text-align: left;
     position: fixed;
     background-color: rgba(144, 255, 222);
@@ -72,7 +72,7 @@ body{
     top: 10px;
     position: fixed;
     width: 20%;
-    height: 90%;
+    height: 93%;
     border-radius: 10px;
     border: 5px solid #000000;
     padding: 10px;
