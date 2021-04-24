@@ -1,0 +1,43 @@
+body{
+    font-family: "comic sans ms";
+    /* background-color: blue;
+    color: red;
+    aight waiting for someone to kill me */
+}
+
+.tabs-pannel{
+    top: 0;
+    align-content: center;
+    position: sticky;
+}
+
+.chat-pannel{
+    right: 0;
+    bottom: 0;
+    text-align: left;
+    position: fixed;
+}
+
+.tab{
+    padding-right: 5%;
+}
+
+.flex{
+    display: flex;
+}
+
+#messages{
+    right: 0;
+    top: 0;
+    position: fixed;
+    width: 20%;
+    text-align: left;
+    align-self: flex-start;
+    word-wrap: normal;
+    word-break: break-all;
+}
+
+.message{
+    text-align: left;
+
+}

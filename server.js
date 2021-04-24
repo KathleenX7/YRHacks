@@ -9,6 +9,9 @@ const http = require('http');
 const server = http.createServer(app);
 const io = require("socket.io")(server);
 
+//variables
+var players = []
+
 // send all file things over to client
 app.use(express.static(__dirname));
 /**
@@ -32,4 +35,14 @@ server.listen(3000, () => {
  */
 io.sockets.on('connection', function(socket) {
   console.log("new connection");
+  socket.on('name', function(name){
+    console.log("client's name is " + name);
+    // add a new player
+    players.push({name: name, food: "0", energy: "0", transportation: "0", waste: "0"});
+    console.log(players);
+  });
+  socket.on('chat message', function(msg) {
+    console.log(msg);
+    io.emit('chat message', msg);
+  });
 });

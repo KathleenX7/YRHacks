@@ -2,9 +2,25 @@
 <head>
     <title>YRHacks Thing</title><!--we should think of a legit title-->
     <link rel="icon" href="./assets/icon.png">
+    <link rel="stylesheet" type="text/css" href="style.css">
 </head>
-<body>
-    <p>hi</p>
+<body onload="onConnect()">
+    <!--tabs pannels-->
+    <div class="tabs-pannel flex">
+        <a class="tab">tab1</a>
+        <a class="tab">tab2</a>
+        <a class="tab">tab3</a>
+    </div>
+    <!--options and stats-->
+    <!--main screen-->
+    <!--chat-->
+    <div class="chat-pannel">
+        <div id="messages"></div>
+        <form class="chat-pannel" id="chat">
+            <input id="chat-box" type="text" autocomplete="off">
+            <button id="send-button" type="submit">Send</button>
+        </form>
+    </div>
     <script src="/socket.io/socket.io.js"></script>
     <script src="./script.js"></script>
 </body>
