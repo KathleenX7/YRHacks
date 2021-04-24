@@ -26,19 +26,6 @@ function sendName(){
     user = name;
 }
 
-function switchView(event, viewName){
-    var tabs = document.getElementsByClassName("tab-element");
-    for(let i = 0;i < tabs.length;i++){
-        tabs[i].style.display = "none";
-    }
-    var tabLinks = document.getElementsByClassName("tabs");
-    for(let i = 0;i < tabLinks.length;i++){
-        tabLinks[i].className = tablinks[i].className.replace(" active", "");
-    }
-    document.getElementById(cityName).style.display = "block";
-    event.currentTarget.className += " active";
-}
-
 socket.on('chat message', function(msg) {
     var item = document.createElement('div');
     item.className = "message";
